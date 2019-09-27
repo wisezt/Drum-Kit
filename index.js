@@ -14,7 +14,7 @@ for (var i = 0; i < btnArr.length; i++) {
 
 }
 
-
+// remove for loop and add lisnter to document
 document.addEventListener("keydown",
     // event is important!!!
     function(event) {
