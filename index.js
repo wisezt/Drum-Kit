@@ -14,12 +14,12 @@ for (var i = 0; i < btnArr.length; i++) {
 
 }
 
-for (var i = 0; i < btnArr.length; i++) {
-  //console.log(i);
-  btnArr[i].addEventListener("keydown",
+
+document.addEventListener("keydown",
     // event is important!!!
     function(event) {
-      var str = event.code.substring(3,4).toLowerCase();
+      var str = event.key;
+      console.log(event);
 
       playAudio(str);
       console.log(str);
@@ -29,7 +29,6 @@ for (var i = 0; i < btnArr.length; i++) {
 
   );
 
-}
 
 function playAudio(str) {
 
