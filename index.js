@@ -8,6 +8,7 @@ for (var i = 0; i < btnArr.length; i++) {
       console.log(this.innerText);
 
 
+
     }
 
   );
@@ -19,15 +20,28 @@ document.addEventListener("keydown",
     // event is important!!!
     function(event) {
       var str = event.key;
-      console.log(event);
+      //console.log(event);
 
       playAudio(str);
-      console.log(str);
+      //console.log(str);
 
+      buttonAnimation(str);
 
     }
 
   );
+
+  document.addEventListener("keyup",
+      // event is important!!!
+      function(event) {
+        var str = event.key;
+
+
+        buttonAnimationkeyup(str);
+
+      }
+
+    );
 
 
 function playAudio(str) {
@@ -67,6 +81,23 @@ function playAudio(str) {
 
   }
 
+
+
+}
+
+
+function buttonAnimation(key){
+
+  var activeButton = document.querySelector("." + key);
+  activeButton.classList.add("pressed");
+
+
+}
+
+function buttonAnimationkeyup(key){
+
+  var activeButton = document.querySelector("." + key);
+  activeButton.classList.remove("pressed");
 
 
 }
